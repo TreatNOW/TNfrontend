@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /api/
+Disallow: /css/
+Disallow: /lib/
+Disallow: /scripts/
+Disallow: /mobile/

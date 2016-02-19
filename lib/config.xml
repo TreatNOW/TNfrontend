@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+    <!-- key/value pairs -->
+    <items>
+        <item>
+            <key>site.domain</key>
+            <value>treatnow.zidmi.localhost</value>
+        </item>
+        <item>
+            <key>site.partnerCode</key>
+            <value>TREAT</value>
+        </item>
+        <item>
+            <key>site.enableMobileApp</key>
+            <type>boolean</type>
+            <value>true</value>
+        </item>
+        <item>
+            <key>site.accountId</key>
+            <value>4</value>
+        </item>
+        <item>
+            <key>zidmi.uri</key>
+            <value>http://app.zidmi.localhost/treat/</value>
+        </item>
+        <item>
+            <key>zidmi.cdn-uri</key>
+            <value>http://cdn.zidmi.localhost/i/</value>
+        </item>
+        <item>
+            <key>runtime.debug</key>
+            <type>boolean</type>
+            <value>true</value>
+        </item>
+    </items>
+    <!-- databases -->
+    <databases>
+        <database>
+            <key>zidmi</key>
+            <type>mysql</type>
+            <host>localhost</host>
+            <dbname>zidmi</dbname>
+            <username>root</username>
+            <password>w5rul35</password>
+        </database>
+    </databases>
+    <!-- message queue -->
+    <queues>
+        <queue>
+            <key>local</key>
+            <type>rabbitmq</type>
+            <host>localhost</host>
+            <username>zidmi</username>
+            <password>P33kaboo</password>
+        </queue>
+    </queues>
+</config>

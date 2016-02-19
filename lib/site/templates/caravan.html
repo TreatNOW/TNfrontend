@@ -1,0 +1,56 @@
+
+<div id="mobileHomeContent">
+
+    <div id="intro">
+        {$caravan.introText}
+    </div>
+
+    <div class="signup">
+        <p>{$home.consumer-signup.intro}</p>
+        <form id="consumerSignupForm">
+            <input name="listReference" type="hidden" value="consumer" />
+            <input name="source" type="hidden" value="HomePage" />
+            <input name="emailAddress" type="email" placeholder="{$home.consumer-signup.placeholder}" />
+            <button onclick="doSubscribe('consumerSignupForm');return false;">{$home.consumer-signup.button}</button>
+        </form>
+    </div>
+
+    <div class="content">
+        {$caravan.launch-text}
+    </div>
+
+    <div id="how-it-works">
+        <div>
+            <h2>{$home.how-it-works.title}</h2>
+            <div>
+                <img src="/images/hex-beauty.png" class="hex">
+                <p>{$home.how-it-works.beauty-caption}</p>
+            </div>
+            <div>
+                <img src="/images/hex-body.png" class="hex">
+                <p>{$home.how-it-works.wellness-caption}</p>
+            </div>
+            <div>
+                <img src="/images/hex-male.png" class="hex">
+                <p>{$home.how-it-works.male-caption}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="signup">
+        <p>{$home.provider-signup.intro}</p>
+        <form id="providerSignupForm">
+            <input name="listReference" type="hidden" value="provider" />
+            <input name="source" type="hidden" value="HomePage" />
+            <input name="emailAddress" type="email" placeholder="{$home.provider-signup.placeholder}" />
+            <button onclick="doSubscribe('providerSignupForm');return false;">{$home.provider-signup.button}</button>
+        </form>
+        {$caravan.provider-signup.info}
+    </div>
+
+
+</div>
+
+<div id="subscribeConfContent" style="display:none;">
+    {$home.subscribe-conf}
+</div>

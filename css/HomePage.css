@@ -1,0 +1,50 @@
+
+h1   {
+    font-size: 2.4rem;
+    font-weight: 200;
+    line-height: 1.4;
+}
+#intro {
+    padding-top:1rem;
+    padding-left:1rem;
+    padding-right:1rem;
+    padding-bottom:0;
+}
+#app-text p {
+    text-align:center;
+}
+#how-it-works {
+    background-color: #000000;
+}
+.signup {
+    padding:10px;
+    text-align: center;
+}
+
+.content {
+    padding:20px;
+    text-align: center;
+}
+#how-it-works {
+    text-align:center;
+    color:#ffffff;
+    min-height:440px;
+}
+#how-it-works h2 {
+    color:#ffffff;
+}
+.hex {
+    width:200px;
+}
+.black-pointer {
+    text-align:center;
+    background-color: #ffffff;
+}
+#subscribeConfirmation {
+    border:solid #99cc66 4px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    font-size: 2rem;
+    padding-top:20px;
+    padding-left:20px;
+}

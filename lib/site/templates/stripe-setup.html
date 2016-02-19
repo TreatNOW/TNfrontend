@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <title>TreatNOW Stripe Setup</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="/css/StripeSetup2.css">
+    <link rel="shortcut icon" href="/images/shortcut-icon.png">
+    <link rel="icon" href="/images/shortcut-icon.png">
+    <script type="text/javascript" src="/scripts/lib/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/scripts/lib/jquery-ui-1.11.4.min.js"></script>
+    <!-- TODO: swap in treatnow google api key -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyB5YGzjwOFGxzM-aS6NaRXO3ql1olHFLNU&sensor=false"></script>
+    <script type="text/javascript" src="/scripts/lib/zadama-util-1.26.min.js"></script>
+    <script type="text/javascript" src="/scripts/lib/jquery.simplemodal-1.4.4.js"></script>
+    <script type="text/javascript" src="/scripts/site.js"></script>
+    <script type="text/javascript" src="/scripts/StripeSetup.js"></script>
+</head>
+<body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NTL77R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NTL77R');</script>
+<!-- End Google Tag Manager -->
+<div id="header">
+    <img src="/images/logo.png" height="60"/>
+    <h1>TreatNOW Stripe Setup</h1>
+</div>
+
+<div id="content">
+
+    <!-- intro -->
+    <p>Payments taken through TreatNOW are processed using the online card provider "Stripe".</p>
+    <p>This means we can pay you at the point of sale rather than you having to wait.</p>
+    <p>In order to do this you need to set up an account with Stripe:</p>
+
+    <div id="buttons"><a id="setupButton" href="https://connect.stripe.com/oauth/authorize?response_type=code&client_id={$stripeClientId}&scope=read_write&state={$paymentConfigCode}">START SETUP</a></div>
+
+    <br /><br /><br /><br /><br /><br /><br />
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,354 @@
+/***************************/
+/* GENERAL                 */
+/***************************/
+html { font-size: 62.5%; }
+body {
+    background-color: #ffffff;
+    margin:0;
+    padding:0;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size:3vh;
+    line-height: 3vh;
+}
+.pane {
+    display:none;
+}
+.alignCenter {
+    text-align: center;
+}
+.clear {
+    clear:both;
+}
+.fieldError {
+    background-color:#faded8;
+    border:solid 1px #b10909;
+}
+/***************************/
+/* STARTUP                 */
+/***************************/
+#startup {
+    height:100vh;
+    width:100vw;
+/*    background-image: url("/images/startup.jpg");*/
+    background-size: 100% 100%;
+}
+#startup img {
+    width:50vw;
+    margin-top:25vh;
+    margin-left:25vw;
+}
+/***************************/
+/* MAIN                    */
+/***************************/
+#main {
+    height:100vh;
+    width:100vw;
+    background-color: #ffffff;
+    display:none;
+}
+/***************************/
+/* HEADER                  */
+/***************************/
+#header {
+    height:14vh;
+    background: #000000 url("/images/colorbar.png") no-repeat bottom;
+    background-size: 100% auto;
+    overflow: hidden;
+}
+#header-back {
+    height:14vh;
+    width:30vw;
+    float:left;
+}
+#header-back button {
+    width:4vw;
+    height:5vh;
+    background: url("/images/back.png") no-repeat;
+    background-size: 100% 100%;
+    margin-top:4vh;
+    margin-left:5vw;
+    border:0;
+}
+#header-title {
+    height:14vh;
+    width:40vw;
+    float:left;
+    background: url("/images/header-logo2.png") no-repeat center center;
+    background-size:100% 8vh;
+}
+#header-lang {
+    height:14vh;
+    width:30vw;
+    float:left;
+    text-align:right;
+}
+#header-lang button {
+    width:12vw;
+    height:3vh;
+    margin-top:5vh;
+    margin-right:5vw;
+    color:#000000;
+    background-color: #ffffff;
+    border:0;
+}
+/***************************/
+/* FOOTER                  */
+/***************************/
+#footer {
+    text-align: center;
+    color:#333;
+    font-size:3vh;
+}
+#footer a {
+    color:#333;
+}
+/***************************/
+/* INTRO / LOCATION        */
+/***************************/
+#intro-text {
+    height:6vh;
+    padding-left:4vw;
+    padding-top:2vh;
+    background-color:#ffffff;
+}
+#location {
+    height:10vh;
+    font-size: 2vh;
+    font-weight: bold;
+    padding-left:4vw;
+    padding-top:2vh;
+    background-color:#ffffff;
+}
+#location input {
+    width:50vw;
+    border-radius:4px;
+    border:1px solid #aaaaaa;
+    margin-left:4vw;
+    height:3vh;
+    background: url(/images/search.png) no-repeat right;
+    background-size: 2vh auto;
+    padding-left:2vw;
+    padding-right:4vw;
+
+}
+#location-info {
+    padding-top:2vh;
+}
+/***************************/
+/* CATEGORIES > LEVEL 1    */
+/***************************/
+#category-view-1 {
+    padding-left:4vw;
+
+}
+#category-view-1 button {
+    height:16vh;
+    border:0;
+    border-top:0.7vh solid #000000;
+    width:92vw;
+    background-color: #ffffff;
+    font-size:3.4vh;
+    font-weight:bold;
+    text-align:left;
+    padding-bottom:5vh;
+    padding-left:0;
+}
+#beauty-button {
+    background:url("/images/hex/beauty-maintenance.png") no-repeat right center;
+    background-size: 14vh auto;
+}
+#wellness-button {
+    background:url("/images/hex/wellness.png") no-repeat right center;
+    background-size: 14vh auto;
+}
+#male-button {
+    background:url("/images/hex/male-maintenance.png") no-repeat right center;
+    background-size: 14vh auto;
+}
+/***************************/
+/* CATEGORIES > LEVEL 2    */
+/***************************/
+.category-grid-view {
+    background-color: #000000;
+    width:100vw;
+    height:70vh;
+    color:#ffffff;
+}
+.category-grid-view h2 {
+    padding-left:4vw;
+    padding-top:3vh;
+    font-size:3vh;
+}
+.category-grid-view img {
+    width:86vw;
+    max-height:60vh;
+    padding-left:7vw;
+    border:0;
+}
+.gridCaption {
+    position:absolute;
+    font-size:1.4vh;
+}
+/***************************/
+/* CATEGORIES > LEVEL 3    */
+/***************************/
+.category-subView {
+    background-color: #000000;
+    width:100vw;
+}
+.category-subView-header {
+    height:20vh;
+    width:92vw;
+    margin-left:4vw;
+    color:#fff;
+}
+.category-subView-header h2 {
+    font-size:4vh;
+    line-height: 4vh;
+}
+.category-subView-header h3 {
+    font-size:3vh;
+    line-height: 3vh;
+}
+.category-subView-main {
+    width:92vw;
+    padding-left:4vw;
+    padding-right:4vw;
+    height:45vh;
+    margin-top:6vh;
+}
+.category-subView-list {
+    width:92vw;
+    height:45vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+#subView-beauty-header {
+    background: #000000 url("/images/hex/beauty-maintenance.png") no-repeat right;
+    background-size: 20vh auto;
+}
+#subView-wellness-header {
+    background: #000000 url("/images/hex/wellness.png") no-repeat right;
+    background-size: 20vh auto;
+}
+#subView-male-header {
+    background: #000000 url("/images/hex/male-maintenance.png") no-repeat right;
+    background-size: 20vh auto;
+}
+.categoryButton {
+    height:10vh;
+    margin-bottom:1vh;
+    background-color:#ffffff;
+    padding-left:4vw;
+    font-size:3vh;
+    font-weight:bold;
+    display:block;
+    border:0;
+    width:100%;
+}
+/***************************/
+/* NVICAT                  */
+/***************************/
+#nviCat-list {
+    width:92vw;
+    height:45vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+#nviCat-list button {
+    width:100%;
+    height:10vh;
+    margin-bottom:1vh;
+    padding-left:4vw;
+    font-size:2.4vh;
+    font-weight:bold;
+    display:block;
+    border:0;
+    width:100%;
+}
+/***************************/
+/* MAP                     */
+/***************************/
+#mapSelect {
+    width:100vw;
+}
+#map {
+    width:100vw;
+    height:70vh;
+}
+#mapSelect {
+    position:absolute;
+    width:80vw;
+    height:8vh;
+    font-size:3vh;
+    z-index: 1000;
+    background-color:#000000;
+    color:#ffffff;
+    border:0;
+    border-radius:1vh;
+    top:0;
+    left:0;
+}
+#infoTemplate {
+    display:none;
+    border:solid 1px #000;
+}
+#infoTemplate h1 {
+    font-size:1.4vh;
+}
+#infoTemplate p {
+    font-size:1.2vh;
+}
+/***************************/
+/* INFO PANE               */
+/***************************/
+.infoPane {
+    padding-left:6vw;
+    padding-right:6vw;
+    font-size:3vh;
+}
+.infoPane button {
+    width:75vw;
+    height:8vh;
+    border:0;
+    margin-top:1vh;
+    margin-bottom:1vh;
+    color:#fff;
+    background-color: #000;
+    border-radius:4px;
+    font-size:2.5vh;
+}
+.infoPane input {
+    font-size:3vh;
+    margin-top:2vh;
+    margin-bottom:2vh;
+    width:80vw;
+    padding:1vh;
+    border:2px solid #aaaaaa;
+}
+/***************************/
+/* NO VENUES VIEW          */
+/***************************/
+#noVenuesView h2 {
+    font-size:3vh;
+}
+#noVenuesView img {
+    width:15vw;
+}
+#nearestVenueDetail h3 {
+    font-size:3.5vh;
+    font-weight:bold;
+    margin:0;
+}
+#nearestVenueDetail h4 {
+    font-size:2.5vh;
+    font-style:italic;
+    font-weight:normal;
+    margin:0;
+}
+#nearestVenueDetail p {
+    text-align:right;
+    font-size:2.5vh;
+    margin:0;
+}
+

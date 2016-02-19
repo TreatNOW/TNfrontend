@@ -1,2 +1,0 @@
-# TNfrontend
-About TreatNOW page

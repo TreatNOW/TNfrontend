@@ -1,0 +1,85 @@
+
+<div id="intro">
+    {$home.introText}
+</div>
+
+
+<table><tr>
+    <td style="width:500;">
+        <div id="app-text">
+            <p>{$home.app-intro}</p>
+        </div>
+        <div class="signup">
+            <p>{$home.consumer-signup.intro}</p>
+            <form id="consumerSignupForm">
+                <input name="listReference" type="hidden" value="consumer" />
+                <input name="source" type="hidden" value="HomePage" />
+                <input name="emailAddress" type="email" placeholder="{$home.consumer-signup.placeholder}" />
+                <button onclick="doSubscribe('consumerSignupForm');return false;">{$home.consumer-signup.button}</button>
+            </form>
+        </div>
+
+        <div class="content">
+            {$home.launch-text}
+        </div>
+    </td>
+    <td>
+        <iframe src="/mobile" height="550" width="380" style="margin-right:30px;"></iframe>
+    </td>
+</tr></table>
+
+
+<div id="how-it-works">
+    <div class="white-pointer">
+        <img src="/images/pointer.png">
+    </div>
+    <div>
+        <h2>{$home.how-it-works.title}</h2>
+        <div class="col-left">
+            <img src="/images/hex-beauty.png" class="hex">
+            <p>{$home.how-it-works.beauty-caption}</p>
+        </div>
+        <div class="col-right">
+            <img src="/images/hex-male.png" class="hex">
+            <p>{$home.how-it-works.male-caption}</p>
+        </div>
+        <div class="col-center align-center">
+            <img src="/images/hex-body.png" class="hex">
+            <p>{$home.how-it-works.wellness-caption}</p>
+        </div>
+    </div>
+</div>
+
+<div class="black-pointer">
+    <img src="/images/pointer-black.png">
+</div>
+
+<div class="signup">
+    <p>{$home.provider-signup.intro}</p>
+    <form id="providerSignupForm">
+        <input name="listReference" type="hidden" value="provider" />
+        <input name="source" type="hidden" value="HomePage" />
+        <input name="emailAddress" type="email" placeholder="{$home.provider-signup.placeholder}" />
+        <button onclick="doSubscribe('providerSignupForm');return false;">{$home.provider-signup.button}</button>
+    </form>
+    {$home.provider-signup.info}
+</div>
+
+<div id="subscribeConfirmation" style="display:none;">
+    <div style="float:left;">
+        <img src="/images/logo.png" height="160" width="120" />
+    </div>
+    <div style="padding-left:140px;">
+        <h1>Thanks for<br/>subscribing!</h1>
+        <h2>Can you let us know your name?</h2>
+        <form id="subscriberNameForm">
+            <input type="hidden" name="subscriptionId" />
+            <input type="text" name="name" size="16" maxlength="50" placeholder="Name" />
+            <button onclick="addSubscriptionName(); return false;">Update</button>
+        </form>
+        <br /><br />
+    </div>
+</div>
+
+{$contactPopup}
+

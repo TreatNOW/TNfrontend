@@ -1,0 +1,114 @@
+html {
+    font-size: 90%;
+}
+body {
+    background-color: #ffffff;
+    padding:0;
+    font-size: 1.4rem;
+}
+body, td, th, a, h1, h2, h3, h4, h5, h6 {
+    font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+    color:#4b4b4b;
+    margin:0;
+}
+a {
+    color:#003399;
+}
+#header {
+    padding:6vw 6vw 0 6vw;
+}
+#social {
+    float:right;
+    text-align: center;
+    font-size: 2vh;
+}
+#social img {
+    width:10vw;
+    height:10vw;
+}
+.black-pointer {
+    text-align:center;
+    background-color: #ffffff;
+}
+#footer {
+    background-color:#efefef;
+    padding:6vw;
+}
+#footer h2 {
+    font-size:4vh;
+}
+#footer a {
+    color: #666666;
+    text-decoration:none;
+    font-size:3vh;
+}
+.fieldError {
+    background-color:#faded8;
+    border:solid 1px #b10909;
+}
+.content {
+    padding:20px;
+    font-size: 1.8vh;
+}
+
+h1   {
+    font-size: 2.5vh;
+    font-weight: 200;
+    line-height: 1.4;
+}
+#intro {
+    padding:6vw 6vw 0 6vw;
+    font-size: 1.8vh;
+}
+#how-it-works {
+    background-color: #000000;
+}
+.signup {
+    padding:10px;
+    text-align: center;
+    font-size: 1.6vh;
+}
+input {
+    width:80vw;
+    font-size:2vh;
+    padding:1vh;
+    margin-bottom:1vh;
+}
+button {
+    font-size:2vh;
+    background-color: #fdda4d;
+    border:0;
+    padding:1vh;
+    width:80vw;
+    color:#ffffff;
+}
+button:hover {
+    background-color: #f5b20d;
+}
+.content {
+    padding:20px;
+    text-align: center;
+}
+#how-it-works {
+    text-align:center;
+    color:#ffffff;
+    font-size:2vh;
+}
+#how-it-works h2 {
+    color:#ffffff;
+}
+.hex {
+    width:60vw;
+}
+.black-pointer {
+    text-align:center;
+    background-color: #ffffff;
+}
+#subscribeConfContent {
+    font-size:5vh;
+    padding:10vw;
+    height:40vh;
+}
+#logo {
+    width:20vw;
+}

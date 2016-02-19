@@ -1,0 +1,138 @@
+html {
+    font-size: 90%;
+}
+body {
+    background-color: #ffffff;
+    padding:0;
+    font-size: 1.4rem;
+}
+body, td, th, a, h1, h2, h3, h4, h5, h6 {
+    font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+    color:#4b4b4b;
+    margin:0;
+}
+a {
+    color:#003399;
+}
+#header {
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:20px;
+    padding-bottom:0;
+}
+#social {
+    float:right;
+    text-align: center;
+}
+.align-center {
+    text-align:center;
+}
+.col-left {
+    float:left;
+    padding-left:5%;
+    padding-right:5%;
+    padding-top:2%;
+    width:25%;
+}
+.col-center {
+    padding-left:5%;
+    padding-right:5%;
+    padding-top:2%;
+}
+.col-right {
+    float:right;
+    padding-left:5%;
+    padding-right:5%;
+    padding-top:2%;
+    width:25%;
+}
+.black-pointer {
+    text-align:center;
+    background-color: #ffffff;
+}
+#footer {
+    background-color:#efefef;
+    padding-bottom:50px;
+}
+#footer h2 {
+    font-size:1.2rem;
+}
+#footer a {
+    color: #666666;
+    text-decoration:none;
+    font-size:0.9em;
+}
+.fieldError {
+     background-color:#faded8;
+     border:solid 1px #b10909;
+}
+.content {
+    padding:20px;
+}
+#contactPopup {
+    width:600px;
+    background-color:#fff;
+    padding:20px;
+    border-radius:8px;
+}
+#contactTable th {
+    width:140px;
+    vertical-align:top;
+    text-wrap:none;
+    text-align:left;
+    padding-top:10px;
+}
+#contactPopup input {
+    width:400px;
+}
+#contactPopup textarea {
+    width:400px;
+    padding:10px;
+    height:120px;
+    font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+}
+.contactTypeButton {
+    color:#000;
+    background-color:#dddddd;
+}
+input {
+    width:400px;
+    font-size:1.2rem;
+    padding:10px;
+}
+button {
+    font-size:1.2rem;
+    background-color: #fdda4d;
+    border:0;
+    padding:10px;
+    width:160;
+    color:#333;
+}
+button:hover {
+    background-color: #f5b20d;
+}
+#simplemodal-container a.modalCloseImg {
+    background:url(/images/x2.png) no-repeat; /* adjust url as required */
+    width:50px;
+    height:58px;
+    display:inline;
+    z-index:3200;
+    position:absolute;
+    top:-20px;
+    right:-26px;
+    cursor:pointer;
+}
+#subscribeConfirmation {
+    width:520px;
+}
+#subscribeConfirmation h1 {
+    font-weight:bold;
+    font-size:3rem;
+}
+#subscribeConfirmation h2 {
+    font-size:1.2rem;
+    margin-bottom:15px;
+}
+#subscribeConfirmation input {
+    width:200px;
+}

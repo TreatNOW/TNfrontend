@@ -1,0 +1,156 @@
+html {
+    font-size: 90%;
+}
+body {
+    background-color: #ffffff;
+    padding:0;
+    font-size: 1.4rem;
+}
+body, td, th, a, h1, h2, h3, h4, h5, h6 {
+    font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+    margin:0;
+}
+a {
+    color:#003399;
+}
+#header {
+    height:94px;
+    background-color: #000000;
+    color:#ffffff;
+}
+#header img {
+    float:left;
+    height:50px;
+    padding:10px;
+    margin:8px 0 5px 12px;
+    background-color: #ffffff;
+    border:solid 1px #333333;
+}
+#header h1 {
+    float:left;
+    margin-left:15px;
+    margin-top:38px;
+}
+#content {
+    padding:20px;
+}
+#providerInfo {
+    width:100%;
+}
+#providerInfo th {
+    text-align:left;
+    vertical-align:top;
+    padding:4px;
+    font-weight: normal;
+    font-style: italic;
+}
+#providerInfo td {
+    text-align:left;
+    vertical-align:top;
+    padding:4px;
+}
+.tableTitle {
+    background-color: #eeeeee;
+    font-weight:bold;
+    font-size: 1.4em;
+}
+.leftCaption {
+    width:260px;
+}
+.highlight {
+    color:#44a3fc;
+}
+.slotButton {
+    border-radius: 10px;
+    font-size:1.1em;
+    padding:4px;
+    margin-left:4px;
+    margin-top:4px;
+    background-color: #aaaaaa;
+    color:#000;
+    border:0;
+    text-align:center;
+}
+#servicesTable {
+    width:100%;
+}
+#servicesTable th {
+    background-color: #f5faff;
+    border: 1px dashed #aaaaaa;
+}
+.align-right {
+    text-align:right;
+}
+.bigButton {
+    font-size:1.6em;
+    border:0;
+    border-radius:10px;
+    padding:10px;
+}
+#feedbackButton {
+    background-color:#eb3f20;
+    color:#fff;
+}
+#verifyButton {
+    background-color:#99cc66;
+}
+#verifyPopup {
+    width:500px;
+}
+#verifyPopup input {
+    width:90%;
+    font-size:1.1em;
+    padding:8px;
+    margin-top:10px;
+    margin-bottom:20px;
+}
+#popupVerifyButton {
+    background-color:#99cc66;
+    width:80%;
+    margin-left:10%;
+}
+#feedbackPopup {
+    width:500px;
+}
+#feedbackPopup input {
+    width:90%;
+    font-size:1.1em;
+    padding:8px;
+    margin-top:10px;
+    margin-bottom:0;
+}
+#feedbackPopup textarea {
+    width:90%;
+    height:200px;
+    font-size:1.1em;
+    padding:8px;
+    margin-top:10px;
+    margin-bottom:20px;
+}
+#popupFeedbackButton {
+    background-color:#99cc66;
+    width:80%;
+    margin-left:10%;
+}
+#simplemodal-container a.modalCloseImg {
+    background:url(/images/x2.png) no-repeat; /* adjust url as required */
+    width:50px;
+    height:58px;
+    display:inline;
+    z-index:3200;
+    position:absolute;
+    top:-20px;
+    right:-26px;
+    cursor:pointer;
+}
+.fieldError {
+    background-color:#faded8;
+    border:solid 1px #b10909;
+}
+.popup {
+    display:none;
+    border:solid 4px #aaaaaa;
+    background-color:#ffffff;
+    border-radius:8px;
+    padding:20px;
+}

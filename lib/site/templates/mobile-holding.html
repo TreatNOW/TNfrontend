@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+    <title>{$title}</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="/css/MobileHolding.css">
+    <link rel="shortcut icon" href="/images/shortcut-icon.png">
+    <link rel="icon" href="/images/shortcut-icon.png">
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script type="text/javascript" src="/scripts/lib/zadama-util-1.26.min.js"></script>
+    <script type="text/javascript" src="/scripts/lib/InputHints.js"></script>
+    <script type="text/javascript" src="/scripts/lib/jquery.cookie.js"></script>
+    <script type="text/javascript" src="/scripts/site.js"></script>
+    <script type="text/javascript" src="/scripts/MobileHolding.js"></script>
+    {$headers}
+    <!-- TradeDoubler site verification 2499199 -->
+</head>
+<body>
+<div id="header">
+    <a href="/"><img id="logo" src="/images/logo.png"></a>
+    <div id="social">
+        <a href="https://www.facebook.com/treatnowapp"><img src="/images/social/facebook.png" height="32" width="32" border="0" alt="Facebook" title="Facebook" /></a>
+        <a href="https://twitter.com/treatnow"><img src="/images/social/twitter.png" height="32" width="32" border="0" alt="Twitter" title="Twitter" /></a>
+        <a href="https://instagram.com/treatnowapp/"><img src="/images/social/instagram.png" height="32" width="32" border="0" alt="Instagram" title="Instagram" /></a>
+        <br/><a href="http://www.treatnowblog.com">latest news on the blog</a>
+    </div>
+</div>
+{$content}
+<div id="footer">
+    <h2>{$desktop.footer.more-info.header}</h2>
+    <a href="/about">{$desktop.footer.more-info.about}</a>
+    <br />
+    <a href="{$desktop.footer.more-info.blog.uri}">{$desktop.footer.more-info.blog.caption}</a>
+    <br />
+    <a href="mailto:{$desktop.footer.contact.email.address}">Email Us</a>
+    <br />
+    <a href="/terms-of-service">{$desktop.footer.legal.terms}</a>
+    <br />
+    <a href="/privacy-policy">{$desktop.footer.legal.privacy-policy}</a>
+</div>
+
+<!-- GOOGLE ANALYTICS -->
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-47432602-1']);
+    _gaq.push(['_setDomainName', 'none']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+</html>

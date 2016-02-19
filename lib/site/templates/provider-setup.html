@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+    <title>TreatNOW Venue Verification</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="/css/ProviderSetup.css">
+    <link rel="shortcut icon" href="/images/shortcut-icon.png">
+    <link rel="icon" href="/images/shortcut-icon.png">
+    <script type="text/javascript" src="/scripts/lib/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="/scripts/lib/jquery-ui-1.11.4.min.js"></script>
+    <!-- TODO: swap in treatnow google api key -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyB5YGzjwOFGxzM-aS6NaRXO3ql1olHFLNU&sensor=false"></script>
+    <script type="text/javascript" src="/scripts/lib/zadama-util-1.26.min.js"></script>
+    <script type="text/javascript" src="/scripts/lib/jquery.simplemodal-1.4.4.js"></script>
+    <script type="text/javascript" src="/scripts/site.js"></script>
+    <script type="text/javascript" src="/scripts/ProviderSetup.js"></script>
+</head>
+<body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NTL77R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NTL77R');</script>
+<!-- End Google Tag Manager -->
+
+<div id="header">
+    <img src="/images/logo.png" height="60"/>
+    <h1>TreatNOW Venue Verification</h1>
+</div>
+
+<div id="content">
+
+    <!-- intro -->
+    <p>This page lists all of the information we currently hold about your venue.</p>
+    <p>Please review and if everything is correct go ahead and press the VERIFY button at the bottom.
+       <!--<br />You will then be asked to complete your payment details so we can send you money.</p>-->
+    <p>If there are any errors there is a link at the bottom to send us feedback. We'll make the changes as quickly as we can to get you online.</p>
+
+    <table id="providerInfo">
+
+        <!-- CORE DETAILS -->
+        <tr><td colspan="2" class="tableTitle">Core Details</td></tr>
+        <tr>
+            <th class="leftCaption">Venue Name:</th>
+            <td class="highlight">{$provider.name}</td>
+        </tr>
+        <tr>
+            <th class="leftCaption">Venue Id:</th>
+            <td>{$provider.partnerReference}</td>
+        </tr>
+        <tr>
+            <th class="leftCaption">Venue Type:</th>
+            <td>{$provider.typeName} - {$provider.partnerRatingName}</td>
+        </tr>
+        <tr>
+            <th class="leftCaption">Address:</th>
+            <td>{$provider.address}</td>
+        </tr>
+        <tr>
+            <th class="leftCaption">Country:</th>
+            <td>{$provider.addressCountryName}</td>
+        </tr>
+        <tr>
+            <th class="leftCaption">Phone Number:</th>
+            <td>{$phoneNumber}</td>
+        </tr>
+        <tr>
+            <th class="leftCaption">Website:</th>
+            <td>{$provider.websiteUri}</td>
+        </tr>
+        <tr>
+            <th class="leftCaption">Opening Hours:</th>
+            <td>{$openHours}</td>
+        </tr>
+        <tr>
+            <th class="leftCaption">Spoken Languages:</th>
+            <td>{$spokenLanguages}</td>
+        </tr>
+
+        <!-- IMAGES -->
+        <tr><td colspan="2" class="tableTitle">Images</td></tr>
+        <tr>
+            <th class="leftCaption">Primary Image:</th>
+            <td>This is the main image we show customers.<br />
+                {$primaryImage}</td>
+        </tr>
+        <tr>
+            <th class="leftCaption">Results:</th>
+            <td>Cropped image for showing in result lists on mobile.<br />
+                {$serviceListImage}</td>
+        </tr>
+
+        <!-- FULFILLMENT DETAILS -->
+        <tr><td colspan="2" class="tableTitle">Booking Details</td></tr>
+        <tr><td colspan="2">This information determines how we send you appointment requests so it's important we've got it right:</td></tr>
+        <tr>
+            <th class="leftCaption">Requests:</th>
+            <td>{$fulfillment.requestHours}</td>
+        </tr>
+        <tr>
+            <th class="leftCaption">Request Action:</th>
+            <td>{$fulfillment.requestAction}</td>
+        </tr>
+        <tr>
+            <th class="leftCaption">Appointment Slots:</th>
+            <td>{$fulfillment.slotConfig}</td>
+        </tr>
+        <tr>
+            <th class="leftCaption">Confirmation Emails:</th>
+            <td>{$fulfillment.confEmails}</td>
+        </tr>
+
+        <!-- SERVICES -->
+        <tr><td colspan="2" class="tableTitle">Services</td></tr>
+        <tr><td colspan="2">{$services}</td></tr>
+
+        <!-- BUTTONS -->
+        <tr><td colspan="2" class="tableTitle">Confirm</td></tr>
+
+        <tr><td colspan="2">
+            <p>If all the information is correct please press the verify button.</p>
+            <p>If not press the changes button to let us know what we've got wrong.</p>
+        </td></tr>
+        <tr><td colspan="2">
+            <button id="feedbackButton" class="bigButton" onclick="openFeedback();">CHANGES NEEDED</button>
+            <button id="verifyButton" class="bigButton" onclick="openVerify();">ALL GOOD - VERIFY</button>
+        </td></tr>
+
+    </table>
+
+    <br /><br /><br /><br /><br /><br /><br />
+
+</div>
+
+<!-- verify popups -->
+<div id="verifyPopup" class="popup">
+    <h2>Verify Venue</h2>
+    Enter your name then click the big green button.
+    <form id="verifyForm">
+        <input type="hidden" name="verificationCode" value="{$verificationCode}" />
+        <input type="text" name="verifierName" placeholder="Name"/>
+    </form>
+    <button id="popupVerifyButton" class="bigButton" onclick="doVerify();">VERIFY</button>
+</div>
+<div id="verifyCompletePopup" class="popup">
+    <h2>Thanks for verifying!</h2>
+    <p>We should have everything live on the app very shortly.</p>
+</div>
+
+<!-- feedback popup -->
+<div id="feedbackPopup" class="popup">
+    <h2>Venue Feedback</h2>
+    Let us know what's wrong with the info we have and we'll update it asap.
+    <form id="feedbackForm">
+        <input type="hidden" name="verificationCode" value="{$verificationCode}" />
+        <input type="text" name="verifierName" placeholder="Name"/>
+        <textarea name="feedback"></textarea>
+    </form>
+    <button id="popupFeedbackButton" class="bigButton" onclick="doFeedback();">SEND FEEDBACK</button>
+</div>
+<div id="feedbackCompletePopup" class="popup">
+    <h2>Feedback Received</h2>
+    <p>We've sent an email to the data entry team who will get on this as a priority.</p>
+</div>
+
+</body>
+</html>
